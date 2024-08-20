@@ -1,60 +1,68 @@
 Day-4 Session-4(15/08/2024)
 ----------------------------
 
-Recap
+Recap:
 ------
-Vim editor
-==========
-1. Esc
---------
-u --> undo 
-yy --> copy
-dd --> cut
-p --> paste
-shift+g --> takes top to bottom
-gg --> takes from bottom to top
+Vim editors:
+Esc
+---
+- u --> undo 
+- yy --> copy
+- dd --> cut
+- p --> paste
+- shift+g --> takes top to bottom
+- gg --> takes from bottom to top
 
-2. colon
+colon
 ----------
-:q --> quit
-:wq --> write and quit
-:q! --> force quit without changes
-:/ --> search from top
-:? --> search from bottom
-:set nu
-:set nonu
-:noh
-:%d
-:1d --> delete 1st line
-:s/ word-to-find/word-to-replace/g
-:%s/ word-to-find/word-to-replace/g
+- :q --> quit
+- :wq --> write and quit
+- :q! --> force quit without changes
+- :/ --> search from top
+- :? --> search from bottom
+- :set nu
+- :set nonu
+- :noh
+- :%d
+- :1d --> delete 1st line
+- :s/ word-to-find/word-to-replace/g
+- :%s/ word-to-find/word-to-replace/g
 
-3. Insert
+> Insert: Just inserting something
 
-awk, cut commands
-chmod ugo+rwx file-name
-R => 4
-W => 2
-X => 1
+
+
+- awk, cut commands
+- chmod ugo+rwx file-name
+- R => 4
+- W => 2
+- X => 1
 
 Linux Administration:
 ---------------------
--> for administration, normal access is not at all enough we need root access 
--> For that, we use the command called 'sudo su'
--> sudo su --> super user
--> If you give sudo su - (sudo su hyphen)
--> This redirects into the /root --> /root is the home folder
--> we need # symbol for administration whether it is normal user or root user
+- for administration, normal access is not at all enough we need root access 
+- For that, we use the command called 'sudo su'
+- sudo su --> super user
+- If you give sudo su - (sudo su hyphen)
+- This redirects into the /root --> /root is the home folder
+- we need # symbol for administration whether it is normal user or root user
 
 User management:
 ----------------
--> User is very important  for a system
--> So, first we have to create User
--> In Linux, there are multiple users and we can add them to groups as well
--> So, for creating the user 
-command is, useradd <user-name>
--> To know who is currently logged-in user 
-command is, id --> which gives info of current user
+- User is very important  for a system
+- So, first we have to create User
+- In Linux, there are multiple users and we can add them to groups as well
+- So, for creating the user 
+> command is,
+```
+ useradd <user-name>
+```
+- To know who is currently logged-in user 
+> command is,
+```
+id <user-name>
+```
+- which gives info of current user
 
 for example:
 -> Adding an user called ramesh by using the command --> useradd ramesh
