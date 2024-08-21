@@ -129,7 +129,7 @@ telnet <DB private IP address> 3306
 -----------------------
 - EC2 Instance
 - Launch: devops-practice, Redhat, t3.micro, without key_pair, allow-all.
-- 
+  
 - **Nginx Setup:**
 ```
 sudo su -
