@@ -1,7 +1,7 @@
-**Day-6 Session-6 (19/08/2024) **
+**Day-6 Session-6 (19/08/2024)**
 ----------------------------------
+
 **Recap**:
-----
 
 #### User Management
 1. Creating Users
