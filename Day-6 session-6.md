@@ -1,190 +1,108 @@
-Day-6 session-6(19/08/2024)
-------------------------------
+### Day-6 Session-6 (19/08/2024) Recap
 
-Recap:
-------
-User management 
-1. creating user
-2. Enabling password-based authentication
-3. Enabling key-based authentication
-4. Primary and secondary groups
+#### User Management
+1. Creating Users
+2. Enabling Password-Based Authentication
+3. Enabling Key-Based Authentication
+4. Primary and Secondary Groups
 
-Package management
-yum --> dnf
-dnf install
-dnf list installed
+#### Package Management
+- `yum` → `dnf`
+- `dnf install`
+- `dnf list installed`
 
-service management
-1. start the service 
-2. stop the service
-3. service status
-4. enabling the status 
-5. Disbaling the status 
+#### Service Management
+1. Start the Service
+2. Stop the Service
+3. Check Service Status: `systemctl status <service>`
+4. Enable Service
+5. Disable Service
 
-systemctl status sshd
+#### Process Management
+1. `ps -ef | grep <process>`
+2. Foreground Process
+3. Background Process
 
-Process management
-1. ps -ef | grep nginx 
-2. foreground
-3. Background
+#### Network Management
+- `netstat -lntp`
 
-Network management
-1. netstat -lntp 
+### Project: Introduction
 
-===============================================
-Project: - Introduction
---------
--> Previously, few years back we have desktop applications 
--> Now, it is all about web-based applications
+#### Desktop Applications vs. Web-Based Applications
 
-Disadvantages of desktop applications:
----------------------------------------
-1. we have to install 
-2. we have to maintain storage
-3. we h ave to upgrade
-4. Fixing the problems
-5. Only in single system 
-7. What if system crash --> everything erases 
-8. system resourses 
+**Disadvantages of Desktop Applications:**
+1. Installation Required
+2. Storage Maintenance
+3. Upgrades Needed
+4. Problem Fixes
+5. Single System Dependency
+6. Risk of Data Loss on System Crash
+7. System Resource Usage
 
-Because of these disadvantages, people moved to Web-based applications 
+**Advantages of Web-Based Applications:**
+1. No Installation
+2. No Upgrades
+3. No Compatibility Issues
+4. No Storage Issues
+5. Accessible Everywhere
 
-Web-based applications:
-------------------------
-1. No installations 
-2. No upgrade
-3. No compatibility issues 
-4. No storage issues 
-5. You can open everywhere 
+**Architecture:**
+- **1-Tier Architecture:** Web-Based Applications
+- **3-Tier Architecture:**
+  - **Web Tier (Frontend):** Load Balancers, Web Servers (HTML, CSS, JavaScript, AngularJS, ReactJS, ExpressJS, jQuery)
+  - **App Tier (Backend):** App Servers (Java, Python, NodeJS, .NET, Go, C#)
+  - **Data Tier (Database):** DB Servers (MySQL, MSSQL, Oracle, PostgreSQL, MongoDB, Redis)
 
--> Web-based applications are fully flexiable. so, everyone moved to web-based applications 
--> We follow 3-tier architecture 
+**Example:**
+- **Web Server:** Converts data into HTML format.
+- **App Server:** Handles SQL queries and application logic.
+- **Database Server:** Stores raw data.
 
-for example:
-------------
-Road side cart
----------------
--> Only one person takes care of everything like cooking, billing, serving, etc
--> At a time he can manage 10 members/persons 
--> he cannot manage everyone at a time 
+### AWS Account and EC2 Instance Setup
 
-what if the business gets popular?
------------------------------------
--> He hires someone 
--> The owner has to focus on product taste and quality 
--> He divides the remainings to others like billing, serving
+1. **Launch EC2 Instance:**
+   - **AMI:** Search for `devops-practice` → Community AMIs → Select Redhat (RHEL-9-DevOps-Practice)
+   - **Instance Type:** `t3.micro`
+   - **Key Pair:** None (username and password only)
+   - **Security Group:** Create security group (Allow-All)
+     - **Description:** Allow all traffic from all IPs
+     - **Inbound Rules:** Select All traffic → Source: `0.0.0.0/0`
 
-what if it became hotel
-------------------------
--> cook, billing counter 
--> Owner --> issues the tokens 
--> Cook --> he will cook and serve 
--> He can manage 15 members 
+2. **Connect to EC2 Instance:**
+   - **Username:** `ec2-user`
+   - **SSH Command:** `ssh ec2-user@<IP>`
+   - **Password:** `DevOps321`
 
-what if 50 members came at a time?
------------------------------------
--> It is difficult to manage cooking and serving for cook
+### Database Server Setup
 
-Then It will upgrade to restaurant:
------------------------------------
--> when you enter --> someone will welcome you, he will show tha table --> captain --> responsibility is, which table is free/empty 
--> waiter --> takes the order --> responsibility is; queue management, taking order, serving order 
--> chef --> sees the order and cook the meal --> only cooking responsibility 
-->  chef --> raw products --> eatable format
+1. **Install MySQL:**
+   - `dnf install mysql-server`
 
--> If the internet traffic is less, desktop applications are enough 
--> But the internet traffic is more and more. so, we moved to web-based applications
+2. **Start and Manage MySQL Service:**
+   - Start: `systemctl start mysqld`
+   - Status: `systemctl status mysqld`
+   - Enable: `systemctl enable mysqld`
 
--> In web-based applications, it is 1-tier architecture
--> waiter  --> web server 
--> chef --> App server 
--> Raw items --> DB server/ data 
+3. **Check Port and Process:**
+   - Port: `netstat -lntp`
+   - Process: `ps -ef | grep mysqld`
 
-raw products ==> data 
+4. **Set MySQL Root Password:**
+   - Command: `mysql_secure_installation --set-root-pass <password>`
 
-for example;
-------------
--> If we take facebook data, it is in the format of tables 
-user_id , user_name, first_name, last_name, password, created date, dob
-1          lakshmi    lakshmi      mungara  lakshmi2297  19-aug-2024 05-07-1999
+5. **Connect to MySQL:**
+   - **Client Inside Server:** `mysql -u root -p<password>`
+   - **Client Outside Server:** `mysql -h <IP> -u root -p<password>`
 
-chef ==> App server
--> Through SQl queries, app server will check the data 
+6. **Database Operations:**
+   - List Databases: `show databases;`
+   - Use Database: `use <database-name>;`
+   - Show Tables: `show tables;`
+   - Query Table: `select * from <table-name>;`
 
-for eg: If you given user-name and password 
-select * from user where user_name = 'lakshmi' and password = 'lakshmi2997'
+**Schemas:**
+- User-related Information: `user` schema
+- Posts-related Information: `posts` schema
+- Videos-related Information: `videos` schema
 
-web server --> put that data into HTML format, so that a normal person can easily understandable format
--> App server gives in this format 
-{
-	"user":"lakshmi",
-	"dob":05-07-1999,
-	"location":"Hyderabad"
-}
-
-
--> If web server is accesing DB server, then the code might expose and easily can hack it 
--> Web server is like security 
--> client directly connects to load balance and web server 
-
-web tier --> Load balancers, web servers 
-App tier --> App servers 
-Data tier --> DB servers 
-
-Technologies in ,
-Databases --> MySQL, MSSQL, Oracle, Postgress, MongoDB, Redis 
-App servers/API(Backend tier)--> Java, Python, NodeJS, dotnet, Go, #C etc 
-Web tier(frontend tier) --> HTML, CSS, Javascript, AngularJS, ReactJS, ExpressJS, Jquery etc..
-
--> Frontend applications are static --> There are generally post in Nginx, Apache etc
--> Backend applications are Dynamic --> previously, JBoss, webspher, WebLogic, etc --> Now, we are using Tomcat 
-============================================================
-
-AWS account --> EC2 instance --> launch instance --> enter the name of the instance --> In applications and OS image -> search for devops-practice  -> go to community AMIs-> select Redhat(RHEL -9-DevOps-Practice)  --> t3.micro --> Key_pair is "no"(we will use only username and password to login server) -->  security group(allow-all)
-
-security group --> create security group --> enter the name(allow-all) --> description(allow every port from every IP) --> Inbound rules --> select All traffic -> 0.0.0.0/ -> click on create security group 
-
-
-username --> ec2-user -> ssh ec2-user@54.90.214.156
-password --> DevOps321
-
-
-Database server
-----------------
-Install DB --> MySQL
-dnf install 
-
-run DB --> systemctl 
-check the status --> systemctl status mysqld
-check port opened or not --> netstat -lntp 
-check the process --> ps -ef | grep mysqld 
-Enabling the mysql service --> systemctl enable mysqld
-
-By default, username is root 
-password we have to setup --> mysql_secure_installation --set-root-pass ExpenseApp@1
-
-client software:
------------------
-
--> server software is mysql-server and it is running, to check the data you should connect to server through client 
--> client package is just mysql 
-
--> By default, client package is installed with the server 
--> we need command to connect to the client --> mysql -h <IP> -u root -p<password>  --> when client is outside the server 
--> mysql -u root -p<password> --> when client is inside the server --> just enter 'mysql'
-
-user related information is stored in --> user schema 
-posts related information is stored in --> posts schema 
-videos related information is stored in --> videos schema 
-
-Note: MySQL is a Database server 
-
-mysql
--------
-show databases;
-use <database-name>;
-show tables;
-select * from <table-name>;
-
-
-
+**Note:** MySQL is a Database Server.
