@@ -1,7 +1,3 @@
-Certainly! Here’s a well-organized summary of the key points from your session:
-
----
-
 ### Day-5 Session-5 (16/08/2024)
 
 #### Recap:
