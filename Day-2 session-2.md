@@ -1,7 +1,8 @@
 
-### Day-2 Session-2 Date: 13/04/2024 - Tuesday
+**Day-2 Session-2 Date: 13/04/2024 - Tuesday**
 -------------------------------------------------
-#### Recap
+## Recap
+
 **Topics Covered:**
 1. What is DevOps?
 2. Waterfall Model vs Agile vs DevOps
