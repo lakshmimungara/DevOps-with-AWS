@@ -1,303 +1,246 @@
-Day - 1 (12/08/2024)
----------------------
-what is DevOps?
 
-example: School management system
+**Day-1 session-1 (12/08/2024)**
 ----------------------------------
-About 50 years back 
-system = stakeholders == students, teachers, parents
+#### What is DevOps?
 
-100-->20 or 30% pass percentage
+Example: ***School Management System***
+- **Historical Context:**
+  - **50 Years Ago:**
+    - System stakeholders: Students, teachers, parents.
+    - Final exam with a pass percentage of 20-30%.
+    - Problems: Lack of seriousness from students, teachers, and parents.
 
-only one final exam
-----------------------
-students --> They are not serious from day 1
-teachers --> They are not serious to complete from day 1
-parents --> They starts worry about their kids
+  - **30 Years Ago:**
+    - Introduction of unit tests, quarterly exams, and pre-finals.
+    - Improved pass percentage through continuous assessment:
+      - Unit Test 1: 30% pass
+      - Unit Test 2: 31%
+      - Final Exam: 80% pass
+    - Continuous improvement through regular assessments and feedback.
 
-pass percentage is very less
+  - **10 Years Ago:**
+    - Addition of slip tests and numerous exams (200 exams over 300 days).
+    - Allowed better analysis of student behavior and significant increase in pass percentage (99%).
 
-30 years back
---------------
-unit tests, quarterly, half-yearly, pre-final 
+**Software Development Life Cycle (SDLC):**
+1. **Requirement Gathering:**
+   - Collecting and documenting what is needed for the project.
+   - Example: A restaurant needs an online ordering system.
 
-unit test-1 --> 1.5 month
+2. **Planning:**
+   - Creating a roadmap and schedule for project execution.
 
-Students --> They are not serious from day 1, atleast they are serious from 1 week before
-teachers --> they are serious from day-1 to complete syllabus
-parents --> They are serious from day 1
+3. **Design:**
+   - Structuring the software, creating wireframes, and defining user interfaces.
 
-30% is passed in unit-1
-parents, teachers start understanding the student's behaviour
+4. **Development:**
+   - Coding and building the software based on the design.
 
-unit test-2 --> 31%
-unit test-3
-quarterly
-half yearly
-prefinal
-final --> 80%  -- pass percentage is drastically increases
+5. **Deployment:**
+   - Releasing the software to a live environment.
 
-10 years back
--------------
-slip test
-300 days
-200 exams
+6. **Testing:**
+   - Checking for bugs and ensuring functionality meets requirements.
 
-students and parents can analyze the student behaviour from day-1
-no.of tests contributed here to increase the pass percentage
-99% pass percentage
+7. **Maintenance:**
+   - Ongoing support and updates to the software.
 
-SDLC  --> software development lifecycle
+**Waterfall Model:**
+- **Characteristics:**
+  - Linear and sequential development process.
+  - Stakeholders: Customers, developers, testers, managers.
+  - Challenges: Long development cycles (e.g., 2 years), delayed feedback, and difficulty in managing defects.
 
-steps of SDLC
--------------
-Consider a Restaurant, let's say you start an IT company. They asked you about the online website for their customers
-example: Restaurant
---------------------
+**Agile Model:**
+- **Characteristics:**
+  - Incremental development with sprints.
+  - Breaking down projects into smaller modules.
+  - Example modules for a restaurant application:
+    - User management (sign-up, login, password management)
+    - Product management (listing products, prices)
+    - Cart management (adding items to cart)
+    - Shipping (adding addresses)
+    - Payment processing
+    - Order management
+  - Continuous feedback and iterative improvements.
 
-1. Requirement
-2. Planning
-3. Design
-4. Developing    
-5. Deploying
-6. Testing
-7. Maintenance
+**DevOps:**
+- **Characteristics:**
+  - Integration of development (Dev) and operations (Ops) teams.
+  - Continuous Integration/Continuous Deployment (CI/CD):
+    - Code is built, tested, and deployed in small, frequent updates.
+  - Enhances collaboration and automates processes.
+  - Tools: Jenkins, GitLab CI, CircleCI, etc.
 
-Waterfall model
----------------
-fathers generation == waterfall model
+**Real Meaning of DevOps:**
+- **Concept:**
+  - Facilitates faster releases and fewer defects through continuous improvement.
+  - Emphasizes cooperation between development and operations teams.
+  - Includes practices like DevSecOps (adding security) and GitOps (managing infrastructure through Git).
 
-2 years time to complete
+---
 
-Stakeholders = customers, developers, testers, managers, end users etc
+### Commands and Operations
 
-Developers --> Are they serious from day-1 - no
-testers --> no they are not serious
-clients --> they are worried from day 1
+**General Commands in Linux:**
 
-after 1 year they got seriousness
+1. **Present Working Directory:**
+   ```bash
+   pwd
+   ```
+   - **Explanation:** Displays the current directory path.
+   - **Additional Context:** Use this command to know where you are in the directory structure.
 
-developers develop it in 6 months
-deploy the application --> build and release in DEV
--> After developing the task for six months, they got the defects
--> In those six months, whoever developed the task might have gone from the company or else still in the company 
--> Either the way is possible, if he is still in the company also - they might not remember what they have done in six months back
--> Again they have to go back and check everything 
+2. **Change Directory:**
+   ```bash
+   cd <directory-path>
+   ```
+   - **Explanation:** Navigates to a different directory.
+   - **Example:** `cd /home/user` moves to the `/home/user` directory.
+   - **Additional Context:** Use `cd ..` to move up one directory level.
 
-testers starting testing --> 100 defects 
-some are invalid  --> 20 invalid defects
--> Developers feel they are creating something so they feel they are superior.
--> Testers, they also feel like superiors because they are stopping the defects into the production 
--> So, due to this reason they start fighting between them like a rivalry
--> After 2 years, they release something --> Maruti 800
--> So, in this overall system everyone is feeling stressed and no one is happy
+3. **Clear Screen:**
+   ```bash
+   clear
+   ```
+   - **Explanation:** Clears the terminal screen.
+   - **Additional Context:** Useful for decluttering the terminal view.
 
--> Later on, they realized that customers were using the internet rapidly. And they started to use the applications
--> There is a high dependency on the internet
--> So, they started to think about the defaults of the system 
--> If the applications are developed and released in this manner, it is not going to work out
--> So, they introduced another process called Agile 
+4. **List Files:**
+   ```bash
+   ls -l
+   ```
+   - **Explanation:** Lists files with detailed information such as permissions, owner, and size.
+   - **Additional Context:** Use `ls -a` to list all files, including hidden ones.
 
-Agile
-------
--> In this, they thought not to do this for such a long time, two years clients should not be made to wait
--> So, they introduced something like Sprints 
--> sprints --> Installment-based deliveries
+5. **List Files with Time-Based Sorting:**
+   ```bash
+   ls -lt
+   ```
+   - **Explanation:** Lists files sorted by modification time, with the newest files first.
+   - **Additional Context:** Useful for viewing recently modified files.
 
--> As you said developing the restaurant application, may take a long time and it is a very big application 
--> So, we can't deliver it at a time. And it isn't easy to do the application 
--> So, they started to divide the long process into different modules
-They are,
+6. **List Files with Reverse Time Sorting:**
+   ```bash
+   ls -ltr
+   ```
+   - **Explanation:** Lists files sorted by modification time, with the oldest files first.
+   - **Additional Context:** Useful for seeing the history of file changes.
 
-modules:
----------
-User management
-	signup
-	login
-	forgot password
-	change password
+7. **List All Files (Including Hidden):**
+   ```bash
+   ls -la
+   ```
+   - **Explanation:** Lists all files, including hidden files.
+   - **Additional Context:** Hidden files start with a dot (`.`), such as `.bashrc`.
 
-product management
-	list the products
-	prices
+8. **Display File Contents:**
+   ```bash
+   cat <file-name>
+   ```
+   - **Explanation:** Displays the contents of a file.
+   - **Example:** `cat example.txt` shows the content of `example.txt`.
 
-cart
-	add to cart
+9. **Create a New File:**
+   ```bash
+   touch <file-name>
+   ```
+   - **Explanation:** Creates a new empty file.
+   - **Example:** `touch newfile.txt` creates an empty file named `newfile.txt`.
 
-shipping
-	adding address
+10. **Remove a File:**
+    ```bash
+    rm <file-name>
+    ```
+    - **Explanation:** Deletes a file.
+    - **Example:** `rm oldfile.txt` removes `oldfile.txt`.
 
-payment
-order management
+11. **Create a Directory:**
+    ```bash
+    mkdir <directory-name>
+    ```
+    - **Explanation:** Creates a new directory.
+    - **Example:** `mkdir newdir` creates a directory named `newdir`.
 
--> So, In this way, a big application is divided into small modules can make the process easy
--> If the application is divided into small modules 
--> My first goal is to solve one after the other task - User management
--> So, developers are serious about the time and their work to complete from day 1
--> They divide the task and time frame for development and testing
-User management --> 1 month
--> They seriously start the development
-15 days --> development
--> After 15 days, they say development is completed. Build and release team deploy again 
-15 days --> testing and deployment
--> Then the testing team come into the picture
-testing --> 30 defects
-10 invalid defects
--> Again same fight starts - when developers start developing testing team is left empty and when the testing team starts testing developers are left empty(free)
--> But, the only advantage here is in a few days like in 15 days fights are all going to resolve
--> At least we will get something as a product 
+12. **Remove an Empty Directory:**
+    ```bash
+    rmdir <directory-name>
+    ```
+    - **Explanation:** Deletes an empty directory.
+    - **Example:** `rmdir emptydir` removes `emptydir` if it’s empty.
 
-client test the user management --> 10 bugs
--> After the client tests the application, we will start with production management
--> In production management, one of the responsibilities is to clear the previous bugs and develop products.
-product management == clear the previous bugs and develop management
--> So, now developers and testers have a stress on them 
--> As the product increases all the defects carry forwarded
--> They have to resolve the issue within that one month, if the deal cannot be done then the defects are added again to the task
--> Just make sure, the defects should be less
-Ferrari == fortuner
--> This process continued for some days, but they understood that still there are some defects in the process
--> They thought that they were not giving any satisfactory products and they were not satisfying the customer's wish.
--> So, they changed the process called DevOps
+13. **Remove a Directory and Its Contents:**
+    ```bash
+    rm -r <directory-name>
+    ```
+    - **Explanation:** Recursively removes a directory and its contents.
+    - **Example:** `rm -r olddir` deletes `olddir` and everything inside it.
 
-DevOps with Agile
-------------------
-day-1
+14. **Rename/Move a File or Directory:**
+    ```bash
+    mv <old-name> <new-name>
+    ```
+    - **Explanation:** Renames or moves a file or directory.
+    - **Example:** `mv oldfile.txt newfile.txt` renames `oldfile.txt` to `newfile.txt`.
 
--> Developers writes some code, the same day build(compile and pack) the code, test it 
--> For example, if we write 100 lines of code --> testing is simple
--> So, here no.of invalid defects is less and gets reduced
--> If the tester tests the application and gives 2 valid defects to the developers 
--> Before one day only the developer wrote the code so, it is very easy for developers
--> Operation team(Ops) --> testing team, build and release(devops)team except the developers
--> Here, the build and release team is called DevOps. Becaz, the coordination has increased between the development team and operations team
--> DevOps - We create an environment between developers and operators who work together
--> After building the code, it is very difficult and tough to build and test the process manually 
--> So, we create a process called CI/CD with the help of tools, the same day we are able to build and test the application
+**File Permissions Representation:**
+- **Example:** `-rw-r--r--`
+  - `-` - File type
+  - `rw-` - User permissions (read and write)
+  - `r--` - Group permissions (read only)
+  - `r--` - Others permissions (read only)
 
+**Change File Permissions:**
+- **Add Permissions:**
+  ```bash
+  chmod o+w <file-name>
+  ```
+  - **Explanation:** Adds write permissions for others.
+  - **Additional Context:** `o` refers to others; `+w` adds write permissions.
 
--> Looking back 10 years, there is always a server down in the banks and applications are not very responsive and it is very slow
--> And now, there are no issues like before and we don't hear it from the banks. Everything is digitilized without going to the bank being able to do 
--> This is all because of DevOps
--> From the last 10 years, the only technology so popular is called DevOps
-Why did it become popular?
--------------------------
--> DevOps engineers can work on any project, although it can be any programming language either it may be java or DevOps or dot net
--> DevOps engineers establish the CI/CD process and it has multiple environments 
--> CI/CD - it means integrating the code of whoever wrote and deployed the same code
--> But, multiple interfaces are mandatory
--> We have multiple interfaces based on CI/CD 
+- **Remove Permissions:**
+  ```bash
+  chmod o-rwx <file-name>
+  ```
+  - **Explanation:** Removes all permissions for others.
+  - **Additional Context:** `o-rwx` removes read, write, and execute permissions.
 
-Here comes the Real meaning of DevOps:
---------------------------------------
-=> It is a process of creating cooperation between the development team and the operations team 
--> I will give you an example, whenever a developer writes the code. What DevOps says is in the same day it has to be built and tested. So, in this process, we can improve and increase the no.of builts and no.of tests before going to production so the product releases the product speed and accuracy 
+- **Give All Permissions to All Members:**
+  ```bash
+  chmod ugo+rwx <file-name>
+  ```
+  - **Explanation:** Grants read, write, and execute permissions to user, group, and others.
+  - **Additional Context:** `ugo` stands for user, group, and others.
 
-DEV QA UAT PRE-PROD PERF PROD
+---
 
-1. Faster releases
-2. Fewer defects
+### Related Concepts
 
-speed and accuracy
--> By the definition, we can say that DevOps is a continuous improvement(continuously evolves)
-DevOps == continuous improvement
-	DevSecOps --> added security inside it
-	shift left
-	GitOps -->It means the entire process should be in Git 
--> Not only developers, DevOps people also should keep their scripts in Git 
--> So, that scripting is mandatory for DevOps
--> Actually, CI/CD process is scripting that has to be put in Git
--> When everything is in Git it is called the source of truth that is called GitOps.
--> Everything is triggered from the Git
-	
-What is a computer?
-------------------
+**Computer Characteristics:**
+- **Components:**
+  - **CPU (Processor):** Executes instructions.
+  - **RAM (Memory):** Temporary storage for active processes.
+  - **OS (Operating System):** Manages hardware and software resources.
+  - **ROM (Storage):** Permanent storage for data.
 
-can I call mobile a computer?
-can I call TV a computer?
-can I call the server a computer?
--> The entire world revolves around computers
-software --> communication between computers 
+- **Devices:**
+  - **Server:** Used for deploying applications. Can be a physical machine or virtual instance.
+  - **Mobile and TV:** Also can be considered computers with different uses.
 
-facebook --> a group of computers/servers(a big application where everyone can access)
+**Client-Server Architecture:**
+- **Client:** Requests services (e.g., a web browser).
+- **Server:** Provides services (e.g., a web server).
 
-computer --> compute something, it can do some work
+**Operating Systems:**
+- **Unix vs. Linux:**
+  - **Unix:** Closed source, proprietary.
+  - **Linux:** Open source, customizable, and widely used in servers.
 
-characteristics of computer:
------------------------------
-CPU(processor)
-RAM
-OS
-ROM(storage)
+**Cloud Services and DevOps:**
+- **Cloud:** Provides scalable and on-demand resources.
+- **DevOps:** Enhances collaboration between development and operations, automating deployment and integration processes.
+- **AWS Account Setup:**
+  - Use private banks, enable international and online usage, and ensure account details match your bank card information.
 
--> Based on these 4 the device is called IP enabled device
+---
 
-server --> The only advantage is to deploy the application
--> The only purpose of the server is, that we put the rest of the application on that server to access them
-
-Can we deploy the application on mobile?
------------------------------------------
-Yes, we can 
-
--> All over the internet we have two things client and server
-for example,
-lawyer and me 
-
-lawyer --> server (serves someone)
-client --> me
-
-Browser  --> client
-for example, edge, chrome, firefox, opera etc.
-
-which OS is suitable for the server?
---------------------------------
-Unix, windows server
-
-The disadvantages of Windows: 
----------------------------
-not open source --> only MS controls
-Graphics --> consumes resources(CPU, RAM)a lot
-cost --> High
-security --> less
-speed -->less
-
-Clicks in windows --> commands --> hardware
- 
-Why azure services are down?
-------------------------------
--> Even if you are running Azure VM in Linux, still it is down. AKS and
-MSSQL down
--> underlying Azure infra is Microsoft OS
-
-Unix == Linux is almost the same 
-The only disadvantage of Unix is, that hardware is locked --> Mac laptop == Mac OS + Mac Hardware
-
-Dell --> Dell hardware
-OS -- you can choose anything
-
--> He built Linux from scratch without lock and released it to the public
-
-Linux --> Ubuntu, Centos, Fedora, Solaris, Android, Redhat etc.
-Commands --> hardware
--> Linux is super speed. Becoz, we reduced one step(clicks)
-
--> Redhat is famous. Becoz, an enterprise if you face any problem they will help us
-Redhat == CentOS/Almalinux
-
--> DevOps need a dynamic environment, whenever the traffic increases servers should be automatically created
--> So, to create the servers we should do it in the cloud itself
--> So, Cloud and DevOps are two wheels to a bike 
-
--> If we are using devops and it has an on-premise environment, the results may not be good
--> But, in case you are using devops and putting devops and cloud together, which means you are using both the applications can perform super speed 
- 
-AWS account  --> Free(1 year)--> 3000(there is refund option)
------------
-1. Use private banks
-2. enable international usage
-3. enable online usage
-
-first name and last name should be as the bank debit/credit card name
-address should be given the same as in the bank
-
-choose - personal account 
