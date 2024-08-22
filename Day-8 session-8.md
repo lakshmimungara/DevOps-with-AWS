@@ -141,7 +141,7 @@
 8. **Important Points for Interviews**
    - **DNS**: Domain Name System, resolves domain names to IP addresses.
    - **Nameservers**: Manage DNS records for a domain.
-   - **A Record**: Maps a domain name to an IP address.
+   - **A Record**: It maps IP address to our domain 
    - **DNS Functionality**: Involves querying root servers, TLD servers, and authoritative DNS servers.
 
 9. **Route 53 Integration**
