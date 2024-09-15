@@ -1,3 +1,6 @@
+**Day-12 session-12(27/08/2024)**
+-----------------------------------
+
 ### Shell Scripting Concepts and Notes
 
 #### 1. **Variables:**
