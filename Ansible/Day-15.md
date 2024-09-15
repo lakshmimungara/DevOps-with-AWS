@@ -1,4 +1,4 @@
-
+**Date: 30/08/2024**
 
 ### Legacy Systems in IT
 - **Legacy System**: Old systems or technologies still in use (e.g., core banking systems).
