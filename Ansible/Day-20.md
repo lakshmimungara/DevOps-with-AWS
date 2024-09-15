@@ -1,5 +1,4 @@
-**Date: 20/08/2024**
-
+**Day-20 session-20(06/09/2024)**
 ### Recap:
 - Topics covered: **Variables, Loops, Conditions**, and the **Expense Project** using an Ansible server.
 
