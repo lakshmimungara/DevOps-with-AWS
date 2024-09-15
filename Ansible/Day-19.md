@@ -1,4 +1,4 @@
-**Date: 19/08/2024**
+**Day-19 session-19(05/09/2024)**
 
 ### Recap:
 - **Functions = Filters**: In Ansible, functions are called **filters**.
