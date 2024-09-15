@@ -1,4 +1,5 @@
-
+**Day-10 session-10(23/08/2024)**
+---------------------------------------
 #### **Manual Execution vs Shell Scripting**
 - **Manual Command Execution Disadvantages:**
   1. Prone to **human errors**.
